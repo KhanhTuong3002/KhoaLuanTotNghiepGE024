@@ -15,6 +15,7 @@ public class Player_MonoInfor : MonoBehaviour
     }
     public void SetPlayerCash(int currentCash)
     {
+        Debug.Log("4." + currentCash);
         PlayerCashText.text = "$ " + currentCash.ToString();
     }
 

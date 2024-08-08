@@ -7,6 +7,7 @@ using TMPro;
 
 using Photon.Pun;
 using System;
+using Unity.VisualScripting;
 
 public enum MonopolyNodeType
 {
@@ -269,13 +270,13 @@ public class MonopolyNode : MonoBehaviourPunCallbacks
                         
                         //pay rent to somebody
 
-                        int renToPay = CalculatePropertyRent();
-                        //pay the rent to the owner
-                        currentPlayer.PayRent(renToPay, owner);
+                        // int renToPay = CalculatePropertyRent();
+                        // //pay the rent to the owner
+                        // currentPlayer.PayRent(renToPay, owner);
 
-                        //show a message about what happend
-                        OnUpdateMessage.Invoke(currentPlayer.name + " pay rent of: " + renToPay + " to " + owner.name);
-                        Debug.Log(currentPlayer.name + "pay rent of: " + renToPay + " to " + owner.name);
+                        // //show a message about what happend
+                        // OnUpdateMessage.Invoke(currentPlayer.name + " pay rent of: " + renToPay + " to " + owner.name);
+                        // Debug.Log(currentPlayer.name + "pay rent of: " + renToPay + " to " + owner.name);
                     }
                     else if (owner.name == "")
                     {
@@ -507,19 +508,21 @@ public class MonopolyNode : MonoBehaviourPunCallbacks
     //    }
     //}
 
-    public void PayRentAfterQuiz(bool isCorrect, Player_Mono currentPlayer)
+    public void PayRentAfterQuiz(bool isCorrect, Player_Mono currentPlayer, Player_Mono nodeOwner)
     {
 
         //pay rent to somebody
         int renToPay = CalculatePropertyRent();
+        Debug.Log(nodeOwner.name);
         //pay the rent to the owner
-        if(isCorrect) renToPay = Mathf.RoundToInt(renToPay * 0.25f);
-        currentPlayer.PayRent(renToPay, owner);
+        if(isCorrect) renToPay = Mathf.RoundToInt(renToPay * 0.75f);
+        Debug.Log(renToPay);
+        currentPlayer.PayRent(renToPay, nodeOwner);
 
         //show a message about what happend
-        if(isCorrect) OnUpdateMessage.Invoke(currentPlayer.name + " has answeared correctly " + " pay discounted rent of: " + renToPay + " to " + owner.name);
-        else OnUpdateMessage.Invoke(currentPlayer.name + " pay rent of: " + renToPay + " to " + owner.name);
-        Debug.Log(currentPlayer.name + "pay rent of: " + renToPay + " to " + owner.name);
+        if(isCorrect) OnUpdateMessage.Invoke(currentPlayer.name + " has answeared correctly " + " pay discounted rent of: " + renToPay + " to " + nodeOwner.name);
+        else OnUpdateMessage.Invoke(currentPlayer.name + " pay rent of: " + renToPay + " to " + nodeOwner.name);
+        Debug.Log(currentPlayer.name + "pay rent of: " + renToPay + " to " + nodeOwner.name);
     }
 
     int CalculatePropertyRent()
