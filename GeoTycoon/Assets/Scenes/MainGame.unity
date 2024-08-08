@@ -16221,8 +16221,8 @@ Transform:
   m_GameObject: {fileID: 354233656}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.39251256, z: -0, w: 0.91974664}
-  m_LocalPosition: {x: -0.221591, y: 84.816, z: -0.1258}
-  m_LocalScale: {x: 0.28143758, y: 9.4957, z: 0.0021539493}
+  m_LocalPosition: {x: -0.224025, y: 87.1207, z: -0.131864}
+  m_LocalScale: {x: 0.28746903, y: 14.104912, z: 0.0022464993}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1901015791}
@@ -27341,8 +27341,8 @@ Transform:
   m_GameObject: {fileID: 609093922}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.222225, y: 84.816, z: -0.2362}
-  m_LocalScale: {x: 0.19698894, y: 9.4957, z: 0.0020491497}
+  m_LocalPosition: {x: -0.222225, y: 87.3514, z: -0.2358}
+  m_LocalScale: {x: 0.19698894, y: 14.566404, z: 0.0020491497}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1901015791}
@@ -29560,7 +29560,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 863718264}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.5000002
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -33094,7 +33094,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2137994538}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.5000002
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -35950,6 +35950,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 872607002}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -40850,8 +40862,8 @@ Transform:
   m_GameObject: {fileID: 946043224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7031005, z: -0, w: 0.71109056}
-  m_LocalPosition: {x: -0.324, y: 84.816, z: -0.12979}
-  m_LocalScale: {x: 0.20087609, y: 9.4957, z: 0.0020491504}
+  m_LocalPosition: {x: -0.324, y: 87.1646, z: -0.13175}
+  m_LocalScale: {x: 0.20559667, y: 14.191983, z: 0.0020491504}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1901015791}
@@ -85457,6 +85469,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 872607002}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

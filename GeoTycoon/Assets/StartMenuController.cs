@@ -16,7 +16,7 @@ public class StartMenuController : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject settingPanel;
 
-    private string tutorialURL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    private string tutorialURL = "https://localhost:7167/HowToPlay";
 
     void Start()
     {
