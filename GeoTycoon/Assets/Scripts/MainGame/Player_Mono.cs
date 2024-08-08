@@ -128,6 +128,7 @@ public class Player_Mono
 
     internal void PayRent(int rentAmount,Player_Mono owner)
     {
+        Debug.Log("3. " + rentAmount);
         //dont have enough money
         if(money < rentAmount) 
         {

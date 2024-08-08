@@ -10,8 +10,8 @@ using Photon.Realtime;
 
 public class UIShowProperty : MonoBehaviourPunCallbacks
 {
-    MonopolyNode nodeReference;
-    Player_Mono playerReference;
+    MonopolyNode nodeReference = new MonopolyNode();
+    Player_Mono playerReference = new Player_Mono();
 
     [Header("Buy Property UI")]
     [SerializeField] GameObject propertyUIPanel;
@@ -105,11 +105,11 @@ public class UIShowProperty : MonoBehaviourPunCallbacks
         }
         else if(isCorrect && nodeReference.owner.name!="")
         {
-            MonopolyNode.instance.PayRentAfterQuiz(true, playerReference);
+            MonopolyNode.instance.PayRentAfterQuiz(true, playerReference, nodeReference.owner);
         }
         else if(!isCorrect && nodeReference.owner.name!="")
         {
-             MonopolyNode.instance.PayRentAfterQuiz(false, playerReference);
+             MonopolyNode.instance.PayRentAfterQuiz(false, playerReference, nodeReference.owner);
         }
         else
         {
