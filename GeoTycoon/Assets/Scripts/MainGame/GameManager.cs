@@ -557,7 +557,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             //STOP THE GAME LOOP ANYHOW
 
             //SHOW UI
-            gameOverPanel.SetActive(true);
+            if(PhotonNetwork.IsConnected && PhotonNetwork.LocalPlayer.ActorNumber != playerList[0].playerId) gameOverPanel.SetActive(true);
             winnerNameText.text = playerList[0].name;
         }
         else{
