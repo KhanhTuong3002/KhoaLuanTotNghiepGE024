@@ -65,6 +65,7 @@ public class ManageCardUI : MonoBehaviourPunCallbacks
 
     public void MortgageButton()
     {
+        AudioPlayer.instance.ClickButtonSound();
         Debug.Log(playerReference.name + " " + nodeReference.name +" ");
         if(!propertyReference.CheckIfMortgageAllowed())
         {
@@ -91,6 +92,7 @@ public class ManageCardUI : MonoBehaviourPunCallbacks
     }
     public void UnMortgageButton()
     {
+        AudioPlayer.instance.ClickButtonSound();
         if (!nodeReference.IsMortgaged)
         {
             //ERROR MESSAGE OR SUCH

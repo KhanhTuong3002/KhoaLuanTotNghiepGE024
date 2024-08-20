@@ -50,6 +50,7 @@ public class ManagePropertyUI : MonoBehaviourPunCallbacks
 
     public void BuyHouseButton()
     {
+        AudioPlayer.instance.ClickButtonSound();
         //for multiplayer rpc call
         int playerId = playerReference.playerId;
         nodeNameList = new string[nodesInSet.Count];
@@ -86,6 +87,7 @@ public class ManagePropertyUI : MonoBehaviourPunCallbacks
 
     public void SellHouseButton()
     {
+        AudioPlayer.instance.ClickButtonSound();
         int playerId = playerReference.playerId;
         nodeNameList = new string[nodesInSet.Count];
         for(int i = 0; i< nodesInSet.Count; i++)
